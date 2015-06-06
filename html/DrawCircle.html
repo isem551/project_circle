@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script language="JavaScript" type="text/javascript">
+			document.firstline = "Welcome!" 
+		</script>
+		<title>Circle</title>
+		<meta charset="utf-8">
+		<!--css-->
+		<link href="../css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+		<script type="text/JavaScript" src="../js/jsDraw2D.js"></script>
+		<!--scripts-->	
+		<script language="JavaScript">
+			function calculateArea(){
+				var radius =document.form1.txtRadius.value;
+				var area =(radius * radius * Math.PI);
+				var circumference = (2 * radius * Math.PI);
+				
+				document.form1.calArea.value = area;
+				document.form1.calCircum.value = circumference;
+				
+				drawCircle(radius);
+			}
+			function showHideDiv(){
+				result.style.display = "block";
+			}
+			function drawCircle(radius){
+				//Create jsGraphics object
+					var gr = new jsGraphics(document.getElementById("canvas"));
+
+					//Create jsColor object
+					var col = new jsColor("red");
+
+					//Draw a Line between 2 points
+					var pt1 = new jsPoint(320,230);
+					
+					if (radius > 201){
+						radius = 200; 
+					}
+					//Draw filled circle with pt1 as center point and radius 30. 
+					gr.fillCircle(col,pt1,radius);
+			}
+		 </script>	
+	</head>
+	<body >		
+    	<div id="div_circle">
+		<script> 
+			document.open(); 
+			document.write(document.firstline);
+			document.open();
+		</script>
+		<form name="form1">
+				<br>
+				<span class="titles">Enter the radius of circle (0-200):</span>
+				<input type="text" name="txtRadius" size=10>
+				<input type="button" value="Calculate" onClick='calculateArea(); showHideDiv();'> 
+			<div id="result" style="display: none;">				
+				<br>
+				<span class="titles">Area: </span><input type="text" name="calArea">  
+				<span class="titles">Circumference:</span> <input type="text" name="calCircum">
+				<br>
+			</div>
+		</form>
+		</div>
+	</body>
+</html>
+
+ 
