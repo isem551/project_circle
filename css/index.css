@@ -7,13 +7,11 @@ body {
     float: left;
     left: 33%;
     top: 14%;
-    position: absolute;
     margin: 40px 0 0 0;
     font: normal normal normal 2em/1.5em "alternate-gothic-no-2-d", "AlternateGothic2 BT", Helvetica, Arial, sans-serif;
     font-weight: none;
     letter-spacing: 0.05em;
     line-height: 0.6em;
-    color: #222222;
     z-index: 3;
     cursor: move;
     -webkit-transform: translate3d(0, 0, 0);

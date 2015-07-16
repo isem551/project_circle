@@ -1,0 +1,11 @@
+<h2>List</h2>
+<div>
+    <label>search: </label><input type="search" ng-model="search">
+    <br>
+</div>
+<ul>
+    <li ng-repeat="contact in contacts | filter:search">
+        <a href="#/contact/{{$index}}">{{contact.id}}</a>
+        : {{contact.saying}}
+    </li>
+</ul>

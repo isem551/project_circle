@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<title>Home|Assignment_2</title>
+		<meta charset="utf-8">
 		<script language="JavaScript" type="text/javascript">
 			document.firstline = "Welcome!" 
 		</script>
@@ -29,10 +35,10 @@
 					var gr = new jsGraphics(document.getElementById("canvas"));
 
 					//Create jsColor object
-					var col = new jsColor("red");
+					var col = new jsColor("yellow");
 
 					//Draw a Line between 2 points
-					var pt1 = new jsPoint(320,230);
+					var pt1 = new jsPoint(320,530);
 					
 					if (radius > 201){
 						radius = 200; 
@@ -43,25 +49,76 @@
 		 </script>	
 	</head>
 	<body >		
-    	<div id="div_circle">
-		<script> 
-			document.open(); 
-			document.write(document.firstline);
-			document.open();
-		</script>
-		<form name="form1">
-				<br>
-				<span class="titles">Enter the radius of circle (0-200):</span>
-				<input type="text" name="txtRadius" size=10>
-				<input type="button" value="Calculate" onClick='calculateArea(); showHideDiv();'> 
-			<div id="result" style="display: none;">				
-				<br>
-				<span class="titles">Area: </span><input type="text" name="calArea">  
-				<span class="titles">Circumference:</span> <input type="text" name="calCircum">
-				<br>
+		<header class="navbar" role="banner">
+				<div class="container">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					      <a class="navbar-brand" href="#">Assignment_2</a>
+					    </div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      <ul class="nav navbar-nav">
+					        <li class="active"><a href="../html/index.html">Home <span class="sr-only">(current)</span></a></li>
+					        <li><a href="../html/DrawCircle.html">HW1</a></li> 
+					        <li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="../html/index.html">Home</a></li>
+					            <li><a href="../html/DrawCircle.html">HW1</a></li>
+					            <li><a href="#">TBD</a></li>
+					            <li role="separator" class="divider"></li>
+					            <li><a href="#">TBD</a></li>
+					            <li role="separator" class="divider"></li>
+					            <li><a href="#">TBD</a></li>
+					          </ul>
+					        </li>
+					      </ul>
+					    </div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+				</div>
+			</header>
+		<div class="container">
+			<div class="jumbo">
+				<form name="form1">
+				<br/>
+						<div class="col-sm-3 col-xs-6">
+							<div class="input-group">
+							  <span class="input-group-addon" id="basic-addon1">#</span>
+							  <input type="text" name="txtRadius" class="form-control" id="txtRadius" placeholder="Enter Radius (0-200)" aria-describedby="basic-addon1">
+							</div>
+							<br/>
+							<input class="btn btn-success" type="button" value="Calculate" onClick='calculateArea(); showHideDiv();'> 
+						</div>
+
+						<div class="col-sm-6 col-xs-12">
+							<div id="result" style="display: none;">	
+								<div class="input-group">
+								  <span class="input-group-addon" id="basic-addon1">Area</span>
+								  <input type="text" name="calArea" class="form-control" id="calArea" placeholder="Area" aria-describedby="basic-addon1">
+								</div>
+								<div class="input-group">
+								  <span class="input-group-addon" id="basic-addon1">Circumference</span>
+								  <input type="text" name="calCircum" class="form-control" id="calCircum" placeholder="Circumference" aria-describedby="basic-addon1">
+								</div>
+							 </div>
+						</div>
+				</form>
 			</div>
-		</form>
 		</div>
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>
 </html>
 
